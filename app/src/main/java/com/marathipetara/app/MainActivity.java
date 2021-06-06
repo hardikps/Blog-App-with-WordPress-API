@@ -3,11 +3,13 @@ package com.marathipetara.app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.GridView;
 
 import com.bumptech.glide.request.RequestOptions;
 import com.glide.slider.library.SliderLayout;
 import com.glide.slider.library.slidertypes.BaseSliderView;
 import com.glide.slider.library.slidertypes.DefaultSliderView;
+import com.marathipetara.app.adapters.GridCategoryAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     SliderLayout sliderLayout;
+    GridView gridView;
+    GridCategoryAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void InitiateViews() {
         sliderLayout = findViewById(R.id.slider);
+        gridView = findViewById(R.id.gird_view);
+        adapter = new GridCategoryAdapter(this);
+        gridView.setAdapter(adapter);
         
     }
 

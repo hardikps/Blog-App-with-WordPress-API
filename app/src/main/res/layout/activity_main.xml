@@ -40,7 +40,8 @@
                     <GridView
                         android:id="@+id/gird_view"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:numColumns="4"
+                        android:layout_height="200dp">
 
                     </GridView>
                 </androidx.cardview.widget.CardView>
