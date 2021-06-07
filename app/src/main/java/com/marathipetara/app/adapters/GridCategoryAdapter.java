@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.marathipetara.app.R;
 
 import java.util.ArrayList;
@@ -63,6 +64,12 @@ public class GridCategoryAdapter extends BaseAdapter {
         {
             holder = (ViewHolder) convertView.getTag();
         }
+        holder.textView.setText(demoCategories.get(position).imageName);
+        Glide.with(context)
+                .load(demoCategories.get(position).ImageId).into(holder.circleImageView);
+
+
+
         return convertView;
     }
 
